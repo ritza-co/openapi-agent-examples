@@ -17,7 +17,7 @@
 </p>
 
 <h1>
- OpenAPI Agent Examples
+ OpenAPI agent examples
 </h1>
 
 
@@ -25,17 +25,17 @@
 
 
 
-This repository demonstrates how to build OpenAPI-powered AI agents using two popular frameworks: [LangChain](https://python.langchain.com/docs/introduction/) and [Haystack](https://haystack.deepset.ai/). These agents can process user queries, interact with APIs described by OpenAPI specifications, and generate intelligent responses.
+This repository demonstrates how to build OpenAPI-powered AI agents using two popular frameworks, [LangChain](https://python.langchain.com/docs/introduction/) and [Haystack](https://haystack.deepset.ai/). These agents can process user queries, interact with APIs described by OpenAPI documents, and generate intelligent responses.
 
 For an in-depth comparison of LangChain and Haystack, see [this article](https://www.speakeasy.com/openapi).
 
-## Repository Structure
+## Repository structure
 
 The repository is organized into the following directories:
 
 ### 1. `f1-fastapi-server`
 
-A mock Formula 1 API server built using FastAPI. This API serves as the backend for the agents.
+A mock Formula One (F1) API server built using FastAPI. This API serves as the backend for the agents.
 
 - **Files:**
   - `main.py`: FastAPI application defining endpoints for querying F1 race winners.
@@ -49,7 +49,7 @@ An AI agent built with LangChain that interacts with the F1 API to fetch race da
 
 - **Files:**
   - `langchain_agent.py`: Script defining the LangChain agent.
-  - `openapi.json`: OpenAPI specification (converted to JSON format) for the F1 API.
+  - `openapi.json`: OpenAPI document (converted to JSON format) for the F1 API.
   - `README.md`: Instructions for setting up and running the LangChain agent.
   - `requirements.txt`: Dependencies required for the LangChain agent.
 
@@ -59,11 +59,11 @@ An AI agent built with Haystack that performs similar tasks as the LangChain age
 
 - **Files:**
   - `haystack_agent.py`: Script defining the Haystack agent.
-  - `openapi.yaml`: OpenAPI specification for the F1 API.
+  - `openapi.yaml`: OpenAPI document for the F1 API.
   - `README.md`: Instructions for setting up and running the Haystack agent.
   - `requirements.txt`: Dependencies required for the Haystack agent.
 
-## Setup Instructions
+## Setup instructions
 
 ### Prerequisites
 
@@ -72,14 +72,14 @@ An AI agent built with Haystack that performs similar tasks as the LangChain age
 
 ### Steps
 
-1. **Clone the Repository:**
+1. **Clone the repository:**
 
    ```bash
    git clone https://github.com/ritza-co/openapi-agent-examples.git
    cd openapi-agent-examples
    ```
 
-2. **Set Up the F1 API Server:**
+2. **Set up the F1 API server:**
    - Navigate to the `f1-fastapi-server` directory:
 
      ```bash
@@ -98,11 +98,11 @@ An AI agent built with Haystack that performs similar tasks as the LangChain age
      uvicorn main:app --reload
      ```
 
-   - The server will be available at `http://127.0.0.1:8000`.
+   The server will be available at `http://127.0.0.1:8000`.
 
-   - To get the OpenAPI spec for the API server, navigate to `http://127.0.0.1:8000/openapi.json`.
+   To get the OpenAPI document for the API server, navigate to `http://127.0.0.1:8000/openapi.json`.
 
-3. **Run the LangChain Agent:**
+3. **Run the LangChain agent:**
    - Navigate to the `langchain-agent` directory:
 
      ```bash
@@ -127,7 +127,7 @@ An AI agent built with Haystack that performs similar tasks as the LangChain age
      python langchain_agent.py "Who won the Monaco Grand Prix in 2024?"
      ```
 
-4. **Run the Haystack Agent:**
+4. **Run the Haystack agent:**
    - Navigate to the `haystack-agent` directory:
 
      ```bash
